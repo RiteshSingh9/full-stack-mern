@@ -1,14 +1,10 @@
 const router = require('express').Router();
-const { validateRegister } = require('../../middlewares/authValidtionMiddleware');
+const { validateRegister, validateLogin } = require('../../middlewares/authValidtionMiddleware');
 const {
-    register_user
+    register_user, login_user
 } = require('../../controllers/authController');
 
-router.post('/login', (req, res) => {
-    res.json({
-        message: 'Login  NOT IMPLEMENTED',
-    })
-})
+router.post('/login', validateLogin, login_user)
 router.post('/register', validateRegister, register_user)
 
 module.exports = router;

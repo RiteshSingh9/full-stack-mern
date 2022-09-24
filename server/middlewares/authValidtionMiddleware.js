@@ -14,3 +14,9 @@ exports.validateRegister = [
         return true;
     }).bail(),
 ]
+
+exports.validateLogin = [
+    body('email').not().isEmpty().withMessage('Email is required').bail().isEmail().withMessage('Invalid Email !').bail(),
+
+    body('password').not().isEmpty().withMessage('Password is required').bail()
+]
