@@ -35,6 +35,8 @@ const app = express();
 app.use(cors());
 app.use(helmet())
 
+app.use(express.json())
+
 // cookie middlewares
 app.use(cookieParser(process.env.SECRE_KEY_COOKIE));
 
