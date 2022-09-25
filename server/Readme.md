@@ -22,13 +22,17 @@
 
 ###### Todos
 
-- **GET    -> /api/todos/**
-- **GET    -> /api/todos/:id**
+- **GET    -> /api/todos/get/:userId**
+- **GET    -> /api/todos/get/:userId/:todoId**
 - **POST   -> /api/todos/create**
-- **PUT    -> /api/todos/:id** 
+- **PUT    -> /api/todos/:todoId** 
+- **PATCH  -> /api/todos//mark_completed/:todoId**
 - **DELETE -> /api/todos/:id**
 
-
+###### Task add
+Task description -> required
+Task dueDate,
+Task isImportant
 
 ## Response structure
 
